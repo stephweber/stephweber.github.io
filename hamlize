@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+Dir.glob("*.html.haml") do |f|
+  `haml #{f} > #{f.gsub(".haml", "")}`
+end
