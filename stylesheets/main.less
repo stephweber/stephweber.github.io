@@ -16,6 +16,11 @@
 body {
   .opensans;
   .inverse-colors;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 h1, h2, h3{
@@ -35,13 +40,48 @@ h1, h2, h3{
 
 .contentsection {
   .make-row();
+  display: table;
 }
 
-.contentcaption {
+.contenttext {
   .make-lg-column(7);
 }
 .contentpicture {
   .make-lg-column(5);
+}
+
+.contentpicturecolumn {
+  .make-lg-column(12);
+}
+
+.contentpicturerow {
+  .make-row();
+  margin-top: 1%;
+}
+
+.contentpicturecolumn {
+  .make-lg-column(12);
+}
+.contentpicturehalfcolumn {
+  .make-lg-column(6);
+}
+
+.contentcaption {
+  .small;
+  text-align: right;
+}
+
+.scaledown {
+  max-width: 75%;
+}
+
+.scalewaydown {
+  max-width: 50%;
+}
+
+.sub {
+  vertical-align: sub;
+  font-size: x-small;
 }
 
 .odd {
@@ -65,7 +105,6 @@ h1, h2, h3{
 }
 
 img {
-  max-width: 100%;
 }
 
 img.portrait {
@@ -118,4 +157,50 @@ img.portrait {
 
 .deptlink {
   .whitetext;
+}
+
+.licensetext {
+  .small;
+  .make-lg-column(11);
+}
+
+.licenseimage {
+  .make-lg-column(1);
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 60 px;
+}
+
+.ed-section {
+  margin-top: 10px;
+  .make-row();
+}
+
+.ed-entry {
+  .make-lg-column(6);
+}
+
+.ed-spacer {
+  .make-lg-column(1);
+}
+
+.ed-date {
+  .make-lg-column(5);
+}
+
+.ed-description {
+  margin-left: 2%;
+  .make-lg-column(5);
+}
+
+.ed-description-section {
+  .make-row();
 }

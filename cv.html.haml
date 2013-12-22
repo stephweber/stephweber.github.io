@@ -1,1 +1,330 @@
-%h2.pagetitle CV
+
+%h2.pagetitle Stephanie C. Weber
+.address
+  321 Hoyt Laboratory
+  %br
+  William Street
+  %br
+  Princeton, NJ 08544
+.phone
+  Phone: (609) 258-5731
+%a.email{href: 'mailto:scweber@princeton.edu'}
+  Email: scweber@princeton.edu
+
+%h3 Education
+
+.ed-section
+  .ed-entry
+    Ph.D. Biochemistry, Stanford University
+  .ed-date
+    2006-2011
+    
+.ed-section
+  .ed-entry
+    B.S. Biology, B.S. Chemistry,
+    = succeed ',' do
+      %span.latin<> summa cum laude
+    Duke University
+  .ed-date
+    2002-2006
+
+%h3 Research Experience
+
+.ed-section
+  .ed-entry
+    Postdoctoral fellow with Cliff Brangwynne, Princeton University
+  .ed-date
+    2011-present
+.ed-description-section
+  .ed-description
+    Mechanisms controlling nucleolar, cell, and body size in the nematode
+    %span.latin Caenorhabditis elegans
+
+.ed-section
+  .ed-entry
+    Graduate student with Julie Theriot, Stanford University
+  .ed-date
+    2007-2011
+.ed-description-section
+  .ed-description
+    Macromolecular motion
+    = succeed ':' do
+      %span.latin<> in vivo
+    anomalous diffusion through an "active" viscoelastic medium
+
+.ed-section
+  .ed-entry
+    Undergraduate student with Arno Greenleaf, Duke University
+  .ed-date
+    2005-2006
+.ed-description-section
+  .ed-description
+    FF Domains and the Binding of PCAPs to the Carboxy Terminal Domain of RNA polymerase II
+
+.ed-section
+  .ed-entry
+    Summer student with Kerry O'Banion, University of Rochester
+  .ed-date
+    2004
+.ed-description-section
+  .ed-description
+    The Use of RNA Interference to Elucidate the Role of mPGES-1 in PGE2 Biosynthesis
+
+.ed-section
+  .ed-entry
+    Undergraduate student with Steve Haase, Duke University
+  .ed-date
+    2003-2005
+.ed-description-section
+  .ed-description
+    The Effect of Clb6 on Population Doubling Time in
+    %span.latin Saccharomyces cerevisiae
+
+%h3 Honors, Awards and Fellowships
+
+.ed-section
+  .ed-entry Damon Runyon Postdoctoral Fellowship
+  .ed-date 2012 - present
+
+.ed-section
+  .ed-entry Jane Coffin Childs Memorial Fund Postdoctoral Fellowship (declined)
+  .ed-date 2012
+
+.ed-section
+  .ed-entry Life Sciences Research Foundation Postdoctoral Fellowship (declined)
+  .ed-date 2012
+
+.ed-section
+  .ed-entry Bioengineering Outstanding Teaching Assistant Award
+  .ed-date 2011
+
+.ed-section 
+  .ed-entry Harold M. Weintraub Graduate Student Award
+  .ed-date 2011
+.ed-description-section
+  .ed-description
+    National award recognizing outstanding achievement in graduate studies in the biological sciences
+  
+.ed-section
+  .ed-entry NSF Graduate Research Fellowship
+  .ed-date 2008-2011
+  
+.ed-section
+  .ed-entry Graduation with Distinction in Biology, Chemistry
+  .ed-date 2006
+
+.ed-section
+  .ed-entry Faculty Scholar Award
+  .ed-date 2005
+.ed-description-section
+  .ed-description
+    Highest honor bestowed upon a Duke undergraduate recognizing intellectual leadership and scholarly accomplishment
+
+.ed-section
+  .ed-entry Phi Beta Kappa
+  .ed-date 2005
+
+.ed-section
+  .ed-entry Deans' Summer Research Fellowship
+  .ed-date 2005
+
+.ed-section
+  .ed-entry GEBS/NSF REU Summer Scholars Program
+  .ed-date 2004
+
+.ed-section
+  .ed-entry Howard Hughes Research Fellows Program
+  .ed-date 2003
+
+%h3 Publications
+
+- pubmed_base_url = "http://www.ncbi.nlm.nih.gov/pubmed/"
+%ul.publication-list
+  %li.publication
+    %span.authors Weber, S. C., and Brangwynne, C. P.
+    = surround '(', ')' do 
+      %span.date 2012
+    = succeed ',' do
+      %span.title Getting RNA and Protein in Phase
+    = succeed ',' do
+      %span.journal Cell
+    = succeed ',' do
+      %span.volume 149
+    = succeed '.' do
+      %span.other 1188
+    = surround '(', ')' do
+      - pmid = 22682242
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
+  %li.publication
+    %span.authors Weber, S. C., Thompson, M. A., Moerner, W. E., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2012
+    = succeed ',' do
+      %span.title Analytical tools to distinguish the effects of localization error, confinement and medium elasticity on the velocity autocorrelation function
+    = succeed ',' do
+      %span.journal Biophysical Journal
+    = succeed ',' do
+      %span.volume 102
+    = succeed '.' do
+      %span.other 2443
+    = surround '(', ')' do
+      - pmid = 22713559
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2012
+    = succeed ',' do
+      %span.title<>
+        Nonthermal ATP-dependent fluctuations contribute to the 
+        %span.latin in vivo 
+        motion of chromosomal loci
+    = succeed ',' do
+      %span.journal Proceedings of the National Academy of Sciences
+    = succeed ',' do
+      %span.volume 109
+    = succeed '.' do
+      %span.other 7338
+    = surround '(', ')' do
+      - pmid = 22517744
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
+    = surround '(', ')' do
+      -pmid = 22562796
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "commentary"
+  %li.publication
+    %span.authors Weber, S. C., Theriot, J. A. and Spakowitz, A. J.
+    = surround '(', ')' do 
+      %span.date 2010
+    = succeed ',' do
+      %span.title  Subdiffusive motion of a polymer composed of subdiffusive monomers
+    = succeed ',' do
+      %span.journal Physical Review E
+    = succeed ',' do
+      %span.volume 82
+    = succeed '.' do
+      %span.other 011913
+    = surround '(', ')' do
+      - pmid = 20866654
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
+  %li.publication
+    %span.authors Weber, S. C. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2010
+    = succeed ',' do
+      %span.title Mu Gets in the Loop
+    = succeed ',' do
+      %span.journal Molecular Cell
+    = succeed ',' do
+      %span.volume 39
+    = succeed '.' do
+      %span.other 1
+    = surround '(', ')' do
+      - pmid = 20603069
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2010
+    = succeed ',' do
+      %span.title Bacterial chromosomal loci move subdiffusively through a viscoelastic cytoplasm
+    = succeed ',' do
+      %span.journal Physical Review Letters
+    = succeed ',' do
+      %span.volume 104
+    = succeed '.' do
+      %span.other 238102
+    = surround '(', ')' do
+      - pmid = 20867274
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
+    = surround '(', ')' do
+      %a.pmid{href: "http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.104.238102"}= "commentary"
+
+%h3 Presentations
+
+%ul.publication-list
+  %li.publication 
+    %span.authors Weber, S. C. and Brangwynne, C. P.
+    = surround '(', ')' do 
+      %span.date 2013
+    = succeed ',' do
+      %span.title
+        Organelle size control: Nucleolar assembly and growth in the early 
+        %span.latin C. elegans
+        embryo
+    = succeed '.' do
+      %span.other Poster, American Society for Cell Biology, Annual Meeting
+  %li.publication
+    %span.authors Weber, S. C. and Brangwynne, C. P.
+    = surround '(', ')' do 
+      %span.date 2013
+    = succeed ',' do
+      %span.title<>
+        Mechanisms controlling organelle, cell and body size in the nematode
+        %span.latin Caenorhabditis elegans
+    = succeed '.' do
+      %span.other Poster, Biophysical Society, Annual Meeting
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2011
+    = succeed ',' do
+      %span.title<>
+        ATP-dependent fluctuations drive macromolecular motion
+        %span.latin in vivo
+    = succeed '.' do
+      %span.other Poster, Gordon Research Conferences, Motile and Contractile Systems
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A
+    = surround '(', ')' do 
+      %span.date 2010
+    = succeed ',' do
+      %span.title<>
+        ATP-dependent fluctuations drive macromolecular motion
+        %span.latin in vivo
+    = succeed '.' do
+      %span.other Talk, American Society for Cell Biology, Annual Meeting
+
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2010
+    = succeed ',' do
+      %span.title Bacterial chromosomal loci move subdiffusively through a viscoelastic cytoplasm
+    = succeed '.' do
+      %span.other Poster, Biophysical Society, Annual Meeting
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2009
+    = succeed ',' do
+      %span.title Bacterial chromosomal loci move subdiffusively through a viscoelastic cytoplasm
+    = succeed '.' do
+      %span.other Poster, American Society for Cell Biology, Annual Meeting
+  %li.publication
+    %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
+    = surround '(', ')' do 
+      %span.date 2008
+    = succeed ',' do
+      %span.title Fine-scale dynamic analysis of chromosomal loci
+    = succeed '.' do
+      %span.other Poster, American Society for Cell Biology, Annual Meeting
+
+%h3 Teaching/Mentoring Experience
+.ed-section
+  .ed-entry Guest Lecturer, CBE433/533 Mechanics and Dynamics of Soft Living Matter,Princeton University
+  .ed-date Autumn 2012
+.ed-section
+  .ed-entry Mentoring high school, undergraduate, senior thesis and graduate students, Princeton University
+  .ed-date 2011-present
+.ed-section
+  .ed-entry Teaching Assistant, BIOE41 Physical Biology of Macromolecules, Stanford University
+  .ed-date Autumn 2010
+.ed-section
+  .ed-entry Teaching Assistant, Physiology Course, Marine Biological Laboratory, Woods Hole, MA
+  .ed-date Summer 2008
+.ed-section 
+  .ed-entry Teaching Assistant, BIO109 The Human Genome and Disease, Stanford University
+  .ed-date Winter, Spring 2008
+%hr
+%a{href: 'Weber_CV.pdf'} PDF version
+
