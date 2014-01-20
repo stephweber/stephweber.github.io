@@ -43,11 +43,25 @@ h1, h2, h3{
   display: table;
 }
 
-.contenttext {
-  .make-lg-column(7);
+.vertically-aligned-block {
+  float: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: -4px !important;
+}
+
+div.contenttext {
+  .make-lg-column(6);
+  .vertically-aligned-block;
+
 }
 .contentpicture {
   .make-lg-column(5);
+  .vertically-aligned-block;
+}
+.contentspacer {
+  .make-lg-column(1);
+  .vertically-aligned-block;
 }
 
 .contentpicturecolumn {
@@ -64,11 +78,22 @@ h1, h2, h3{
 }
 .contentpicturehalfcolumn {
   .make-lg-column(6);
+  .vertically-aligned-block;
+}
+
+.contentpicturetriple {
+  .make-lg-column(4);
+  .vertically-aligned-block;
 }
 
 .contentcaption {
   .small;
   text-align: right;
+}
+
+.side-by-side-caption {
+  .small;
+  text-align: left;
 }
 
 .scaledown {
@@ -97,19 +122,29 @@ h1, h2, h3{
 }
 
 .portraitcaption {
-  .make-lg-column(8);
+  .make-lg-column(9);
 }
 
 .portraitimage {
-  .make-lg-column(4);
+  .make-lg-column(3);
 }
 
 img {
 }
 
 img.portrait {
-  max-width: 50%;
-  float: right;
+  .img-responsive;
+  max-height: 200px;
+}
+
+img.homepage-image {
+  max-height: 170px;
+  min-height: 170px;
+}
+
+img.researchimage {
+  min-height: 175px;
+  max-height: 300px;
 }
 
 
@@ -203,4 +238,8 @@ img.portrait {
 
 .ed-description-section {
   .make-row();
+}
+
+a:hover {
+  cursor: pointer;
 }

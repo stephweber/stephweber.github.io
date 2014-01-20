@@ -1,6 +1,6 @@
 !!!
 %head
-  %link{href: 'stylesheets/main.less', rel: 'stylesheet/less', type: 'text/css'}
+  %link{href: 'stylesheets/main.css', rel: 'stylesheet', type: 'text/css'}
 %body
   #wrap
     .content
@@ -30,19 +30,19 @@
         #links-navbar.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li#home
-              %a.navlink#home-link{href: '#'} Home
+              %a.navlink#home-link Home
             %li.divider
             %li#research
-              %a.navlink#research-link{href: '#'} Research
+              %a.navlink#research-link Research
             %li.divider
             %li#publications
-              %a.navlink#publications-link{href: '#'} Publications
+              %a.navlink#publications-link Publications
             %li.divider
             %li#cv
-              %a.navlink#cv-link{href: '#'} CV
+              %a.navlink#cv-link CV
             %li.divider
             %li#contact
-              %a.navlink#contact-link{href: '#'} Contact
+              %a.navlink#contact-link Contact
 
       .well
         #included-content
@@ -60,6 +60,5 @@
 
 
   %script{src: 'https://code.jquery.com/jquery.js', type: 'text/javascript'}
-  %script{src: 'javascripts/less-1.5.0.min.js', type: 'text/javascript'}
   %script{src: 'javascripts/bootstrap.min.js', type: 'text/javascript'}
   %script{src: 'javascripts/includes.js', type: 'text/javascript'}

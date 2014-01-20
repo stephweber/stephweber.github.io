@@ -1,16 +1,18 @@
 %h2.pagetitle Research
 
-%h3 Organelle Assembly and Size Control
 .contentsection
   .contenttext
+    %h3 Organelle Assembly and Size Control
+
     Currently, I am investigating size control mechanisms in the nematode
     = succeed '.' do
       %span.latin Caenorhabditis elegans
-    Using 3D confocal microscopy and quantitative image analysis, I am characterizing the assembly and growth dynamics of the nucleolus in developing embryos.  The nucleolus is a non-membrane bound organelle that produces ribosomes, molecular machines essential for cell growth and homeostasis.    
+    Using 3D confocal microscopy and quantitative image analysis, I am characterizing the assembly and growth dynamics of the nucleolus in developing embryos.  The nucleolus is a non-membrane bound organelle that produces ribosomes, molecular machines essential for cell growth and homeostasis.
+  .contentspacer
   .contentpicture
     .contentpicturerow
       .contentpicturecolumn
-        %img.odd{src: 'images/fib1_8cell.svg'}
+        %img.odd.researchimage{src: 'images/fib1_8cell.svg'}
     .contentpicturerow
       .contentpicturecolumn
         .contentcaption
@@ -18,14 +20,16 @@
           %span.latin C. elegans
           embryo expressing FIB-1::GFP
 %hr
-%h3 Non-thermal ATP-dependent Fluctuations
 .contentsection
   .contenttext
-    Chromosomal locus motion is significantly reduced when ATP synthesis is inhibited.  Furthermore, the temperature-dependence of locus motion is steeper in untreated cells than in energy-depleted cells.  These observations suggest that ATP-dependent enzymatic activity, in addition to thermal fluctuations, contribute to the molecular agitation driving (sub)diffusion in the cell.
+    %h3 Nonthermal ATP-dependent Fluctuations
+
+    Chromosomal locus motion is significantly reduced when ATP synthesis is inhibited.  Furthermore, the temperature dependence of locus motion is steeper in untreated cells than in energy-depleted cells.  These observations suggest that ATP-dependent enzymatic activity, in addition to thermal fluctuations, contribute to the molecular agitation driving (sub)diffusion in the cell.
+  .contentspacer
   .contentpicture
     .contentpicturerow
       .contentpicturecolumn
-        %img.odd.scaledown{src: 'images/superthermal.svg'}
+        %img.odd.scaledown.researchimage{src: 'images/superthermal.svg'}
     .contentpicturerow
       .contentpicturecolumn
         .contentcaption
@@ -35,22 +39,27 @@
             %span.sub app
           of chromosomal loci increases superthermally with temperature in untreated cells.  
 %hr
-%h3 Anomalous Diffusion of Chromosomal Loci
 .contentsection
   .contenttext
+    %h3 Anomalous Diffusion of Chromosomal Loci
+
     Segments of chromosomal DNA jiggle in place in the crowded bacterial cytoplasm.  Tracking the position of loci over time produces a robust subdiffusive scaling law for the mean square displacement.  To identify the source of anomalous behavior, I collaborated with 
     %a{href: 'http://www.stanford.edu/~ajspakow/index.html'} Andy Spakowitz
     to develop analytical theory and Brownian dynamics simulations of polymers under various physical environments.  Our experimental and theoretical observations are consistent with a fractional Langevin motion model, indicating that the viscoelastic properties of the cytoplasm significantly affect intracellular transport processes.
+  .contentspacer
   .contentpicture
     .contentpicturerow
-      .contentpicturecolumn
-        %img.odd{src: 'images/phaseFluor84.svg'}
-    .contentpicturerow
-      .contentpicturecolumn
-        .contentcaption
+      .contentpicturehalfcolumn
+        %img.odd.researchimage{src: 'images/phaseFluor84.svg'}
+      .contentpicturehalfcolumn
+        .side-by-side-caption
           Fluorescent and phase contrast images of an E. coli cell with the replicated 84’ locus visualized by parS/GFP-ParB. 
-    .contentpicturerow
-      .contentpicturecolumn
-        .contentcaption
-          The velocity autocorrelation function for the 84’ locus in E. coli.  The negative peak at short times persists across all values of \delta, consistent with a fractional Langevin motion mechanism for anomalous subdiffusion.   
+    / .contentpicturerow
+    /   .contentpicturecolumn
+    /     .contentcaption
+    /       Fluorescent and phase contrast images of an E. coli cell with the replicated 84’ locus visualized by parS/GFP-ParB. 
+    / .contentpicturerow
+    /   .contentpicturecolumn
+    /     .contentcaption
+    /       The velocity autocorrelation function for the 84’ locus in E. coli.  The negative peak at short times persists across all values of \delta, consistent with a fractional Langevin motion mechanism for anomalous subdiffusion.   
 
