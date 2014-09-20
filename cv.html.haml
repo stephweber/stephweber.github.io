@@ -140,8 +140,8 @@
 %h3 Publications
 
 - pubmed_base_url = "http://www.ncbi.nlm.nih.gov/pubmed/"
-%ul.publication-list
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C., and Brangwynne, C. P.
     = surround '(', ')' do
       %span.date 2012
@@ -156,7 +156,8 @@
     = surround '(', ')' do
       - pmid = 22682242
       %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C., Thompson, M. A., Moerner, W. E., Spakowitz, A. J. and Theriot, J. A.
     = surround '(', ')' do
       %span.date 2012
@@ -171,7 +172,8 @@
     = surround '(', ')' do
       - pmid = 22713559
       %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
     = surround '(', ')' do
       %span.date 2012
@@ -192,7 +194,8 @@
     = surround '(', ')' do
       -pmid = 22562796
       %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "commentary"
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C., Theriot, J. A. and Spakowitz, A. J.
     = surround '(', ')' do
       %span.date 2010
@@ -207,7 +210,8 @@
     = surround '(', ')' do
       - pmid = 20866654
       %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C. and Theriot, J. A.
     = surround '(', ')' do
       %span.date 2010
@@ -222,7 +226,8 @@
     = surround '(', ')' do
       - pmid = 20603069
       %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A.
     = surround '(', ')' do
       %span.date 2010
@@ -242,8 +247,8 @@
 
 %h3 Invited Talks
 
-%ul.publication-list
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C. and Brangwynne, C. P.
     = surround '(', ')' do
       %span.date 2014
@@ -252,7 +257,8 @@
         Nucleolar assembly and growth are governed by a concentration-dependent phase transition
     = succeed '.' do
       %span.other American Society for Cell Biology, Annual Meeting
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C. and Brangwynne, C. P.
     = surround '(', ')' do
       %span.date 2014
@@ -261,7 +267,8 @@
         Inverse size scaling of the nucleolus by a concentration-dependent phase transition
     = succeed '.' do
       %span.other Biophysical Society, Disordered Motifs and Domains in Cell Control
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C. and Brangwynne, C. P.
     = surround '(', ')' do
       %span.date 2014
@@ -270,7 +277,8 @@
         Nucleolar size and assembly is governed by a concentration-dependent phase transition
     = succeed '.' do
       %span.other Gordon Research Conference, Post-Transcriptional Gene Regulation
-  %li.publication
+.pub-section
+  .pub-entry
     %span.authors Weber, S. C., Spakowitz, A. J. and Theriot, J. A
     = surround '(', ')' do
       %span.date 2010
