@@ -151,6 +151,9 @@
       %span.journal Current Biology
     = succeed '.' do
       %span.other In press
+    = surround '(', ')' do
+      - pmid = 25702583
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
 .pub-section
   .pub-entry
     %span.authors Weber, S. C., and Brangwynne, C. P.
