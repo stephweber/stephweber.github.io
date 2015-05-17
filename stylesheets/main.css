@@ -867,7 +867,7 @@ div.contenttext{position:relative;min-height:1px;padding-left:15px;padding-right
 @media (min-width:767px){.portraitimage{float:right}}@media (max-width:767px){.portraitimage{margin-left:15px;margin-top:1em}}
 img.portrait{display:block;max-width:100%;height:auto;max-height:200px}
 img.homepage-image{max-height:170px;min-height:170px}
-img.researchimage{min-height:175px;max-height:300px}
+.researchimage{min-height:175px;max-height:300px}
 .pu{color:#eee}
 .well{background-color:#000;border-color:#555}
 .journal{font-style:italic}
@@ -892,3 +892,5 @@ img.researchimage{min-height:175px;max-height:300px}
 a:hover{cursor:pointer}
 .eval-source{font-style:italic}.eval-source+.eval{margin-top:2em}
 .courses{position:relative;min-height:1px;padding-left:15px;padding-right:15px}@media (min-width:1200px){.courses{float:left;width:100%}}
+@media (min-width:1200px){.content-narrow{display:none !important}}@media (max-width:1200px){.content-wide{display:none !important}}.teachingimage{min-height:175px;max-height:300px}
+@media (max-width:1200px){.teachingimage{margin-top:2em}}

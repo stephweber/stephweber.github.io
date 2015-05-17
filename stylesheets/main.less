@@ -170,7 +170,7 @@ img.homepage-image {
   min-height: 170px;
 }
 
-img.researchimage {
+.researchimage {
   min-height: 175px;
   max-height: 300px;
 }
@@ -291,4 +291,26 @@ a:hover {
 
 .courses {
     .make-lg-column(12);
+}
+
+@media (min-width: @screen-lg-min) {
+  .content-narrow {
+    display: none !important;
+  }
+}
+
+@media (max-width: @screen-lg-min) {
+  .content-wide {
+    display: none !important;
+  }
+}
+
+.teachingimage {
+    .researchimage;
+}
+
+@media (max-width: @screen-lg-min) {
+    .teachingimage {
+        margin-top: 2em;
+    }
 }
