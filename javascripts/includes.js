@@ -4,7 +4,7 @@ function load_content(contentname) {
 }
 
 function section_names() {
-  return ['home', 'research', 'publications', 'cv', 'contact'];
+  return ['home', 'research', 'teaching', 'publications', 'cv', 'contact'];
 }
 
 function deactivate() {
