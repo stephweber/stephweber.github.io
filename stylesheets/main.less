@@ -81,6 +81,15 @@ div.contenttext {
   .vertically-aligned-block;
 }
 
+@media (max-width: @screen-lg-min) {
+    .contentpicturecolumn {
+        float: left;
+        img {
+            float: left;
+        }
+    }
+}
+
 .contentpicturetriple {
   .make-lg-column(4);
   .vertically-aligned-block;
@@ -124,11 +133,28 @@ div.contenttext {
 }
 
 .portraitcaption {
-  .make-lg-column(9);
+  .make-xs-column(10);
+  .make-sm-column(7);
+  .make-md-column(7);
+  .make-lg-column(6);
 }
 
 .portraitimage {
-  .make-lg-column(3);
+  display: inline-block;
+  margin-right: 15px;
+}
+
+@media (min-width: @screen-xs-max) {
+  .portraitimage {
+    float: right
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .portraitimage {
+    margin-left: 15px;
+    margin-top: 1em;
+  }
 }
 
 img {
