@@ -2,6 +2,16 @@
 - pubmed_base_url = "http://www.ncbi.nlm.nih.gov/pubmed/"
 %ul#publication-list
   %li.publication
+    %span.authors Berry, J. M.*, Weber, S. C.*, Vaidya, N. Haataja, M. and Brangwynne, C. P.
+    = surround '(', ')' do 
+      %span.date 2015
+    = succeed ',' do
+      %span.title RNA transcription modulates phase transition-driven nuclear body assembly
+    = succeed ',' do
+      %span.journal Proceedings of the National Academy of Sciences
+    = succeed '.' do
+      %span.other In press. * Co-first authors
+  %li.publication
     %span.authors Weber, S. C., and Brangwynne, C. P.
     = surround '(', ')' do 
       %span.date 2015
