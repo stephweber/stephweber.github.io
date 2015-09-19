@@ -151,6 +151,9 @@
       %span.journal Proceedings of the National Academy of Sciences
     = succeed '.' do
       %span.other In press. * Co-first authors
+    = surround '(', ')' do
+      - pmid = 26351690
+      %a.pmid{href: "#{pubmed_base_url}#{pmid}"}= "pmid: #{pmid}"
 .pub-section
   .pub-entry
     %span.authors Weber, S. C., and Brangwynne, C. P.
