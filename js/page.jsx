@@ -80,7 +80,7 @@ const NavItem = React.createClass({
                     styles.navLinkText,
                     (normalizedName === this.props.selectedName) &&
                     styles.selectedNavItem)}
-            href={`/newindex.html?${normalizeTabName(this.props.name)}`}
+            href={`/index.html?${normalizeTabName(this.props.name)}`}
             onClick={this.onClick}
         >
             <span className={css(styles.navLinkText)}>{this.props.name}</span>
@@ -173,7 +173,7 @@ const Page = React.createClass({
     },
 
     urlFromSelected: function(selected) {
-        return `/newindex.html?${selected}`;
+        return `/index.html?${selected}`;
     },
 
     render: function() {

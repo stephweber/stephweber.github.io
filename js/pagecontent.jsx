@@ -780,6 +780,8 @@ const CV = React.createClass({
                     description="Professor, Stanford University"
                 />
             </CVSection>
+            <hr />
+            <a className={css(ss.link)} href="Weber_CV.pdf">PDF version</a>
         </div>;
     },
 });
