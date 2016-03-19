@@ -365,7 +365,7 @@ const PublicationContent = React.createClass({
                 journal="Current biology"
                 volume="25"
                 postScript="641"
-                pmid="25602583"
+                pmid="25702583"
                 authors="Weber, S. C., and Brangwynne, C. P."
                 year="2015"
                 text={
@@ -393,7 +393,7 @@ const PublicationContent = React.createClass({
                 year="2012"
                 text={
                     "Analytical tools to distinguish the effects " +
-                        "of localization error, confinement and medium" +
+                        "of localization error, confinement and medium " +
                         "elasticity on the velocity autocorrelation " +
                         "function"
                         }
@@ -408,11 +408,10 @@ const PublicationContent = React.createClass({
                 authors="Weber, S. C., Spakowitz, A. J. and Theriot, J. A."
                 year="2012"
                 text={<span>
-                        Nonthermal ATP-dependent fluctations contribute to the
-                        <span className={css(styles.latinName)}>
+                        Nonthermal ATP-dependent fluctuations contribute to
+                        the <span className={css(styles.latinName)}>
                             in vivo
-                        </span>
-                        motion of chromosomal loci</span>
+                        </span> motion of chromosomal loci</span>
                 }
             />
             <Publication
@@ -952,6 +951,9 @@ const styles = StyleSheet.create({
         marginTop: 10,
         maxWidth: "35%",
         minWidth: 400,
+        '@media (max-width: 1119px)': {
+            flexBasis: "auto",
+        },
     },
     researchImageSectionSideBySide: {
         flexBasis: 400,
@@ -966,7 +968,8 @@ const styles = StyleSheet.create({
         },
     },
     researchText: {
-        flexBasis: 150,
+        flexBasis: "auto",
+        flexGrow: 1,
         fontSize: fonts.contentSize,
         '@media (min-width: 1120px)': {
             flexBasis: 525,

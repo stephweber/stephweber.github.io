@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
         borderRadius: 3,
         boxSizing: "border-box",
         marginBottom: 40,
-        minWidth: 400,
+        minWidth: 450,
         padding: 15,
         width: "100%",
     },
