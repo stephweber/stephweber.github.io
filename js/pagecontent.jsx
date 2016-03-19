@@ -163,7 +163,7 @@ const Research = React.createClass({
                             >
                                 Fluorescent and phase contrast images of
                                 an <span className={css(styles.latinName)}>
-                                E. coli</span> cell with the replicated 84’
+                                E. coli</span> cell with the replicated 84'
                                 locus visualized by parS/GFP-ParB.
                             </div>
                         </div>
@@ -279,6 +279,7 @@ const Teaching = React.createClass({
             BIOE41, Physical Biology of Macromolecules, Stanford University
             <br />
             BIO109, The Human Genome and Disease, Stanford University
+            <br />
             <img
                 className={css(styles.teachingImage)}
                 src="images/teaching.jpg"
@@ -944,6 +945,7 @@ const styles = StyleSheet.create({
     researchImageSection: {
         alignItems: "flex-end",
         display: "flex",
+        flexBasis: 400,
         flexDirection: "column",
         justifyContent: "space-around",
         marginBottom: 10,
@@ -952,6 +954,7 @@ const styles = StyleSheet.create({
         minWidth: 400,
     },
     researchImageSectionSideBySide: {
+        flexBasis: 400,
         flexDirection: "row",
         alignItems: "center",
     },
@@ -963,8 +966,10 @@ const styles = StyleSheet.create({
         },
     },
     researchText: {
+        flexBasis: 150,
         fontSize: fonts.contentSize,
         '@media (min-width: 1120px)': {
+            flexBasis: 525,
             maxWidth: 525,
         },
         minWidth: 150,
