@@ -267,6 +267,10 @@ const Teaching = React.createClass({
             <div className={css(styles.subtitle)}>
                 Courses Taught
             </div>
+            BIOL175, Molecular Biology, Santa Clara University
+            <br />
+            BIOL25, Investigations in Cell and Molecular Biology, Santa Clara University
+            <br />
             BIOL181, Physical Biology of the Cell, Santa Clara University
             <br />
             BIOL18, Exploring Biotechnology, Santa Clara University
