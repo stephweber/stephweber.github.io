@@ -469,6 +469,11 @@ const Publications = React.createClass({
                 itemType={'li'}
                 wrapperType={'ul'}
             />
+            <a className={css(ss.link)} 
+               href='http://scholar.google.com/citations?hl=en&user=mZc5jwcAAAAJ'
+            >
+                Google Scholar Profile
+            </a>
         </div>;
 
     },
