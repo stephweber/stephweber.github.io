@@ -11,14 +11,14 @@ const Home = React.createClass({
             </div>
             <p>
                 Both prokaryotic and eukaryotic cells are crowded with
-                macromolecules that form highly organized yet dynamic
+                macromolecules that form highly ordered yet dynamic
                 structures. While advances in fluorescence microscopy enable us
                 to visualize this spatiotemporal heterogeneity, the physical
                 mechanisms underlying intracellular organization remain largely
                 unknown. I am interested in understanding how biological
                 systems establish and dynamically regulate spatial order in the
-                cell and how these processes affect growth and size of the
-                whole organism.
+                cell and how these processes affect the growth, size and health of 
+                whole organisms.
             </p>
             <div className={css(styles.imageRow)}>
                 <div className={css(styles.imageWithCaption)}>
@@ -306,14 +306,14 @@ const Publication = React.createClass({
         year: React.PropTypes.string,
     },
     render: function() {
-        const pubmedLink = <span>(
+        const pubmedLink = this.props.pmid ? <span>(
            <a
                className={css(ss.link)}
                href={`http://www.ncbi.nlm.nih.gov/pubmed/${this.props.pmid}`}
            >
                pmid: {this.props.pmid}
            </a>)
-        </span>;
+        </span> : null;
         const hasCommentary = this.props.commentary ||
                               this.props.commentaryLink;
         const commentaryHref = (
@@ -335,7 +335,9 @@ const Publication = React.createClass({
                 {this.props.journal}
             </span>, <span className={css(styles.volume)}>
                 {this.props.volume}
-            </span>, {this.props.postScript}. {pubmedLink} {commentary}
+            </span>{this.props.postScript ? 
+                    `, ${this.props.postScript}` : 
+                    null}. {pubmedLink} {commentary}
         </Item>;
     },
 });
@@ -348,6 +350,19 @@ const PublicationContent = React.createClass({
     render: function() {
         const Wrapper = this.props.wrapperType;
         return <Wrapper>
+            <Publication
+                itemType={this.props.itemType}
+                journal="Cell Reports"
+                volume="In press"
+                authors={
+                    "Uppaluri, S., Weber, S. C., and Brangwynne, C. P."
+                        }
+                year="2016"
+                text={
+                    "Hierarchical size scaling during " +
+                        "multicellular growth and development"
+                        }
+            />
             <Publication
                 itemType={this.props.itemType}
                 journal="Proceedings of the National Academy of Sciences"
@@ -525,11 +540,21 @@ const CVSection = React.createClass({
 
 const CV = React.createClass({
     render: function() {
+        const santaClaraTeaching = <div>
+            <div>BIOL175 Molecular Biology</div>
+            <div>BIOL25 Investigations in Cell and Molecular Biology</div>
+            <div>BIOL181 Physical Biology of the Cell</div>
+            <div>BIOL18 Exploring Biotechnology</div>
+        </div>;
+        const stanfordTeaching = <div>
+            <div>BIOE41 Physical Biology of Macromolecules</div>
+            <div>BIO109 The Human Genome and Disease</div>
+        </div>;
         return <div className={css(styles.cv)}>
             <div className={css(styles.subtitle)}>
                  Stephanie C. Weber
             </div>
-            <ContactInfo />
+            <ContactInfo hideName={true} />
             <CVSection name="Education">
                 <CVItem
                     date="2011"
@@ -567,31 +592,6 @@ const CV = React.createClass({
                             className={css(styles.latinName)}
                         >in vivo</span>: anomalous diffusion through an
                         "active" viscoelastic medium
-                    </span>}
-                />
-                <CVItem
-                    date="2005-2006"
-                    text={"Undergraduate student with Arno Greenleaf, " +
-                          "Duke University"}
-                    description={"FF domains and the binding of PCAPs to the " +
-                                 "carboxy terminal domain of RNA polymerase II"}
-                />
-                <CVItem
-                    date="2004"
-                    text={"Summer student with Kerry O'Banion, " +
-                          "University of Rochester"}
-                    description={"The use of RNA interference to elucidate " +
-                                 "the role of mPGES-1 in PGE2 biosynthesis"}
-                />
-                <CVItem
-                    date="2003-2005"
-                    text={"Undergraduate student with Steve Haase, " +
-                          "Duke University"}
-                    description={<span>
-                        The effect of CLB6 on population doubling time
-                        in <span
-                            className={css(styles.latinName)}
-                        >Saccharomyces cerevisiae</span>
                     </span>}
                 />
             </CVSection>
@@ -693,44 +693,31 @@ const CV = React.createClass({
                     Meeting.
                 </div>
             </CVSection>
-            <CVSection name="Teaching/Mentoring Experience">
+            <CVSection name="Teaching Experience">
                 <CVItem
-                    date="2015-present"
-                    text={"Adjunct Lecturer, Department of Biology, " +
-                          "Santa Clara University"}
+                    date="2015-2016"
+                    text="Adjunct Lecturer, Department of Biology, Santa Clara University"
+                    description={santaClaraTeaching}
                 />
                 <CVItem
                     date="2013-2015"
-                    text={"Pedagogical training through the Teaching " +
-                          "Transcript Program, The McGraw Center, " +
-                          "Princeton Unviersity"}
+                    text="Teaching Transcript Program, Princeton University"
+                    description="Pedagogical training at The McGraw Center for Teaching and Learning"
                 />
                 <CVItem
-                    date="Autumn 2012, 2014"
-                    text={"Guest Lecturer, CBE433/533 Mechanics and " +
-                          "Dynamics of Soft Living Matter " +
-                          "Princeton University"}
+                    date="2012, 2014"
+                    text="Guest Lecturer, Princeton University"
+                    description={"CBE433/533 Mechanics and Dynamics of Soft Living Matter"}
                 />
                 <CVItem
-                    date="2011-2015"
-                    text={"Mentoring high school, undergraduate, senior " +
-                          "thesis and graduate students " +
-                          "Princeton University"}
+                    date="2008, 2010"
+                    text="Teaching Assistant, Stanford University"
+                    description={stanfordTeaching}
                 />
                 <CVItem
-                    date="Autumn 2010"
-                    text={"Teaching Assistant, BIOE41 Physical Biology " +
-                          "of Macromolecules, Stanford University"}
-                />
-                <CVItem
-                    date="Summer 2008"
-                    text={"Teaching Assistant, Physiology Course, " +
-                          "Marine Biological Laboratory, Woods Hole, MA"}
-                />
-                <CVItem
-                    date="Winter, Spring 2008"
-                    text={"Teaching Assistant, BIO109 The Human Genome " +
-                          "and Disease, Stanford University"}
+                    date="2008"
+                    text="Teaching Assistant, Marine Biological Laboratory, Woods Hole, MA"
+                    description="Physiology Course"
                 />
             </CVSection>
             <CVSection name="Service">
@@ -767,28 +754,6 @@ const CV = React.createClass({
                                  "School in Trenton, NJ"}
                 />
             </CVSection>
-            <CVSection name="References">
-                <CVItem
-                    text="Clifford P. Brangwynne, Ph.D."
-                    description="Assistant Professor, Princeton University"
-                />
-                <CVItem
-                    text="Julie A. Theriot, Ph.D."
-                    description="Professor, Stanford University"
-                />
-                <CVItem
-                    text="Andrew J. Spakowitz, Ph.D."
-                    description="Associate Professor, Stanford University"
-                />
-                <CVItem
-                    text="Mikko Haataja, Ph. D."
-                    description="Professor, Princeton University"
-                />
-                <CVItem
-                    text="Daniel S. Fisher, Ph. D."
-                    description="Professor, Stanford University"
-                />
-            </CVSection>
             <hr />
             <a className={css(ss.link)} href="Weber_CV.pdf">PDF version</a>
         </div>;
@@ -796,23 +761,23 @@ const CV = React.createClass({
 });
 
 const ContactInfo = React.createClass({
+    propTypes: {
+        hideName: React.PropTypes.boolean,
+    },
     render: function() {
         return <div>
-            Stephanie C. Weber
+            {this.props.hideName ? null : <div>Stephanie C. Weber</div>}
+            Stewart Biology Building, W5/15
             <br />
-            202A Daly Science Center
+            1205 Avenue Docteur Penfield
             <br />
-            500 El Camino Real
-            <br />
-            Santa Clara, CA 95053
-            <br />
-            (408) 551-3438
+            Montreal, QC H3A 1B1
             <br />
             <a
                 className={css(ss.link)}
-                href="mailto:sweber@scu.edu"
+                href="mailto:steph.weber@mcgill.ca"
             >
-                sweber@scu.edu
+                steph.weber@mcgill.ca
             </a>
         </div>;
     },
@@ -837,15 +802,12 @@ const JoinUs = React.createClass({
             </div>
             <div className={css(styles.researchContent)}>
                 <div className={css(styles.researchText)}>
-                    <div className={css(styles.subtitle)}>
-                        The Weber Lab is coming to McGill
-                    </div>
                     We are actively recruiting students and postdocs to join
                     our interdisciplinary team. If you are passionate about
                     science and eager to address challenging problems at the
                     interface of cell biology and physics, then contact <a
                         className={css(ss.link)}
-                        href="mailto:steph@weberlab.io"
+                        href="mailto:steph.weber@mcgill.ca"
                     >Steph</a> to discuss projects and available positions.
                 </div>
                 <div
