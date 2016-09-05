@@ -95,7 +95,7 @@ const Research = React.createClass({
                             via Brownian coalescence and Ostwald
                             ripening. Furthermore, RNA transcription appears to
                             stabilize nucleoli and accelerate
-                            coaresening. Thus, non-equilibrium biological
+                            coarsening. Thus, non-equilibrium biological
                             activity may modulate classical phase separation to
                             regulate organelle size (and activity) in response
                             to developmental or environmental conditions.
@@ -772,6 +772,8 @@ const ContactInfo = React.createClass({
             1205 Avenue Docteur Penfield
             <br />
             Montreal, QC H3A 1B1
+            <br />
+            (514) 398-2042
             <br />
             <a
                 className={css(ss.link)}
