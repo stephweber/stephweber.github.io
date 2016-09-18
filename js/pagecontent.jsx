@@ -17,7 +17,7 @@ const Home = React.createClass({
                 mechanisms underlying intracellular organization remain largely
                 unknown. I am interested in understanding how biological
                 systems establish and dynamically regulate spatial order in the
-                cell and how these processes affect the growth, size and health of 
+                cell and ultimately how these processes affect the growth, size and health of 
                 whole organisms.
             </p>
             <div className={css(styles.imageRow)}>
@@ -792,6 +792,14 @@ const Contact = React.createClass({
                 Contact
             </div>
             <ContactInfo />
+            <div> 
+                <a 
+                    className={css(ss.link)} 
+                    href='http://weberlab.net/'
+                >
+                    Weber Lab
+                </a>
+            </div>
         </div>;
     },
 });
@@ -804,7 +812,7 @@ const JoinUs = React.createClass({
             </div>
             <div className={css(styles.researchContent)}>
                 <div className={css(styles.researchText)}>
-                    We are actively recruiting students and postdocs to join
+                    We are actively recruiting graduate students and postdocs to join
                     our interdisciplinary team. If you are passionate about
                     science and eager to address challenging problems at the
                     interface of cell biology and physics, then contact <a

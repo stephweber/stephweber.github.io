@@ -17,7 +17,14 @@ const Header = React.createClass({
                 <div className={css(styles.name)}>
                     Stephanie C. Weber, Ph.D.
                 </div>
-                <div>Assistant Professor</div>
+                <div> 
+                    <a 
+                        className={css(ss.link)} 
+                        href='http://weberlab.net/'
+                    >
+                        Assistant Professor
+                    </a>
+                </div>
                 <div>
                     <a 
                         className={css(ss.link)} 
