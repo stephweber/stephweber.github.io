@@ -353,7 +353,9 @@ const PublicationContent = React.createClass({
             <Publication
                 itemType={this.props.itemType}
                 journal="Cell Reports"
-                volume="In press"
+                volume="17"
+                postScript="345"
+                pmid="27705784"
                 authors={
                     "Uppaluri, S., Weber, S. C., and Brangwynne, C. P."
                         }
